@@ -15,7 +15,7 @@ if page == 'users':
             'username': username
         }
         submit_button = st.form_submit_button(label='リクエスト送信')
-    
+
     if submit_button:
         st.write('## 送信データ')
         st.json(data)
@@ -40,7 +40,7 @@ elif page == 'rooms':
             'capacity': capacity
         }
         submit_button = st.form_submit_button(label='リクエスト送信')
-    
+
     if submit_button:
         st.write('## 送信データ')
         st.json(data)
@@ -85,7 +85,7 @@ elif page == 'bookings':
             ).isoformat(),
         }
         submit_button = st.form_submit_button(label='リクエスト送信')
-    
+
     if submit_button:
         st.write('## 送信データ')
         st.json(data)
