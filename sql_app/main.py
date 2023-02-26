@@ -44,8 +44,8 @@ async def create_users(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
 @app.post("/rooms", response_model=schemas.Room)
 async def create_rooms(room: schemas.RoomCreate, db: Session = Depends(get_db)):
-    return crud.create_user(db=db, user=room)
+    return crud.create_room(db=db, room=room)
 
 @app.post("/bookings", response_model=schemas.Booking)
-async def create_bookings(booking: schemas.BookingiCreate, db: Session = Depends(get_db)):
-    return crud.create_user(db=db, user=booking)
+async def create_bookings(booking: schemas.BookingCreate, db: Session = Depends(get_db)):
+    return crud.create_booking(db=db, booking=booking)
